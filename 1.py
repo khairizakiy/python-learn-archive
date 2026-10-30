@@ -169,18 +169,26 @@
 #     
 # lap(8)
 
-def overtake(reply, tries=1):
-    while True:
-        response = input(reply) 
-        if response in ['yes', 'y']:
-            print("overtake successful")
-        tries += 1
-        if tries >= 2:
-            break
-        if response in ['no', 'n']:
-            print("overtake failed")
-        tries -= 1
-        if tries < 0:
-            raise ValueError('crash happened')
+# def overtake(reply, tries=1):
+#     while True:
+#         response = input(reply) 
+#         if response in ['yes', 'y']:
+#             print("overtake successful")
+#         tries += 1
+#         if tries >= 2:
+#             break
+#         if response in ['no', 'n']:
+#             print("overtake failed")
+#         tries -= 1
+#         if tries < 0:
+#             raise ValueError('crash happened')
+# 
+# overtake("do you want overtake? ")
 
-overtake("do you want overtake? ")
+i = 10
+
+def f(arg=i):
+    print(arg)
+
+i = 20
+f()
