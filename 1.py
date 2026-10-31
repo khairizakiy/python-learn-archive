@@ -185,10 +185,50 @@
 # 
 # overtake("do you want overtake? ")
 
-i = 10
 
-def f(arg=i):
-    print(arg)
+# Argument
+# i = 10
+# 
+# def f(arg=i):
+#     print(arg)
+# 
+# i = 20
+# f(i)
 
-i = 20
-f()
+# def daftar_nomor(angka, daftar=[]): #manggil angka dan daftar
+#     if daftar is None:
+#         daftar = []
+#     daftar.append(angka) # "angka" tersebut ditambahkan ke daftar
+#     return daftar
+# 
+# print(daftar_nomor(1))
+
+# def bagi(angka, pembagi):
+#     print(angka / pembagi)
+# 
+# angka = float(input('angka?'))
+# pembagi = float(input('pembagi?'))
+# 
+# bagi(angka, pembagi)
+
+# def parrot(voltage, state='a stiff', action='voom', type='Norwegian Blue'):
+#     print("-- This parrot wouldn't", action, end=' ')
+#     print("if you put", voltage, "volts through it.")
+#     print("-- Lovely plumage, the", type)
+#     print("-- It's", state, "!")
+# 
+# parrot(voltage=6767)
+
+def porschedealer(kind, color, *arguments, **keywords):
+    print("-- Do you have any", kind, "?")
+    print("-- Yes!, we have", kind, "what color did you want?")
+    print("-- I wanted", kind, "with", color, "color")
+    for args in arguments:
+        print(args)
+    for kw in keywords:
+        print(kw, ":", keywords[kw])
+
+porschedealer("911 Carrera", "Burgundy", "okay you can pick up in 10 months", "thank you",
+              sales="John Doe",
+              client="zakiy",
+              sketch="Porsche Dealer")
